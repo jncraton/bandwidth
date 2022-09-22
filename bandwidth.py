@@ -153,13 +153,13 @@ def get_snr_bandwidth(analog_bandwidth: float, snr: float, snr_in_db: bool) -> f
     Examples:
 
     >>> round(get_snr_bandwidth(1.5, 20, True), 3)
-    9.966
+    9.987
 
     >>> int(get_snr_bandwidth(12, 30, True))
     119
 
     >>> int(get_snr_bandwidth(2200, 1000, False))
-    21924
+    21927
     """
 
     return 0.0
