@@ -3,8 +3,8 @@ Bandwidth Calculator
 
 A Python module to provide bandwidth calculations
 
-Features
---------
+Major Functions
+---------------
 
 - `compute_effective_bandwidth` - Effective bandwidth for transported storage devices (e.g. [AWS Snowmobile](https://aws.amazon.com/snowmobile/))
 - `get_levels_bandwidth` - Max digital bandwidth for channels with known numbers of discrete signal levels
