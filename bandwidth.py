@@ -111,7 +111,7 @@ def convert_db_to_snr(db: float) -> float:
     return 0.0
 
 
-def get_bandwidth_from_levels(analog_bandwidth: float, levels: float) -> float:
+def get_levels_bandwidth(analog_bandwidth: float, levels: float) -> float:
     """Computes the maximum digital bandwidth of an analog channel given signal level count
 
      - analog_bandwidth is the bandwidth of the channel in MHz
@@ -121,28 +121,26 @@ def get_bandwidth_from_levels(analog_bandwidth: float, levels: float) -> float:
 
     2 B \log_2{V}
 
-    >>> get_bandwidth_from_levels(20, 2)
+    >>> get_levels_bandwidth(20, 2)
     40.0
 
-    >>> get_bandwidth_from_levels(2, 1024)
+    >>> get_levels_bandwidth(2, 1024)
     40.0
 
-    >>> get_bandwidth_from_levels(1, 2)
+    >>> get_levels_bandwidth(1, 2)
     2.0
 
-    >>> get_bandwidth_from_levels(0, 2)
+    >>> get_levels_bandwidth(0, 2)
     0.0
 
-    >>> round(get_bandwidth_from_levels(.003, 8), 3)
+    >>> round(get_levels_bandwidth(.003, 8), 3)
     0.018
     """
 
     return 0.0
 
 
-def get_bandwidth_from_snr(
-    analog_bandwidth: float, snr: float, snr_in_db: bool
-) -> float:
+def get_snr_bandwidth(analog_bandwidth: float, snr: float, snr_in_db: bool) -> float:
     """Computes the maximum digital bandwidth of an analog channel given an SNR
 
      - analog_bandwidth is the bandwidth of the channel in MHz
@@ -155,13 +153,13 @@ def get_bandwidth_from_snr(
 
     Examples:
 
-    >>> round(get_bandwidth_from_snr(1.5, 20, True), 3)
+    >>> round(get_snr_bandwidth(1.5, 20, True), 3)
     9.966
 
-    >>> int(get_bandwidth_from_snr(12, 30, True))
+    >>> int(get_snr_bandwidth(12, 30, True))
     119
 
-    >>> int(get_bandwidth_from_snr(2200, 1000, False))
+    >>> int(get_snr_bandwidth(2200, 1000, False))
     21924
     """
 
