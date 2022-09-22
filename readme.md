@@ -16,5 +16,5 @@ Testing
 Once complete, this module should pass the following tests:
 
 ```sh
-python3 -m doctest
+python3 -m doctest bandwidth.py
 ```
